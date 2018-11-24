@@ -1,0 +1,11 @@
+version: "2"
+services:
+  transmission:
+    build: .
+    container_name: transmission
+    ports:
+      - "127.0.0.1:9091:9091"
+      - "54321:54321"
+      - "54321:54321/udp"
+    volumes:
+      - /var/transmission:/var/lib/transmission
