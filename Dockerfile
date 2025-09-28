@@ -1,8 +1,8 @@
-FROM alpine:20240329
+FROM alpine:20250108
 
 ARG TZ=Europe/Paris
 
-RUN apk --no-cache add tzdata transmission-daemon=4.0.5-r0 \
+RUN apk --no-cache add tzdata transmission-daemon=4.0.6-r4 \
   && cp /usr/share/zoneinfo/${TZ} /etc/localtime \
   && deluser transmission \
   && adduser -D -g '' -h /var/lib/transmission transmission
